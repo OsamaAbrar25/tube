@@ -3,26 +3,30 @@ import styled from 'styled-components'
 import {Link, NavLink} from 'react-router-dom'
 
 const Container = styled.div`
-width: 360px;
-margin-bottom: 46px;
+width: ${(props)=>props.type !== 'sm' && '360px'};
+margin-bottom: ${(props)=>props.type === 'sm' ? '10px' : '46px'};
 cursor: pointer;
-
+display: ${(props)=>props.type === 'sm' && 'flex'};
+gap: 10px;
 `
 
 const Image = styled.img`
 width: 100%;
-height: 202px;
+height: ${(props)=>props.type === 'sm' ? '120px' : '202px'};
+flex: 1;
 `
 const Details = styled.div`
-margin-top: 16px;
+margin-top: ${(props)=>props.type === 'sm' ? '0px' : '16px'};
 display: flex;
 gap: 10px;
+flex: 1;
 `
 const ChannelImage = styled.img`
 width: 36px;
 height: 36px;
 border-radius: 50%;
 background-color: #121212;
+display: ${(props)=>props.type === 'sm' && 'none'};
 `
 const TextsContainer = styled.div`
 `
@@ -53,13 +57,13 @@ font-size: 14px;
 color: ${({theme})=>theme.textSoft};
 `
 
-const Card = () => {
+const Card = (props) => {
   return (
     <NavLink to="/video/test" style={{textDecoration:"none"}}>
-    <Container>
-      <Image src='https://ichef.bbci.co.uk/news/976/cpsprodpb/7E51/production/_127773323_608b24d8-f298-4802-8bc7-422ec2fa5f99.jpg.webp'/>
-      <Details>
-        <ChannelImage src='https://www.superiorwallpapers.com/games/spiderman-logo_2524x2524'/>
+    <Container type={props.type}>
+      <Image type={props.type} src='https://ichef.bbci.co.uk/news/976/cpsprodpb/7E51/production/_127773323_608b24d8-f298-4802-8bc7-422ec2fa5f99.jpg.webp'/>
+      <Details type={props.type}>
+        <ChannelImage type={props.type} src='https://www.superiorwallpapers.com/games/spiderman-logo_2524x2524'/>
         <TextsContainer>
           <Title>Elon Musk Twitter Deal</Title>
           {/* <TT> */}

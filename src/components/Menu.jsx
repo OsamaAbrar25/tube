@@ -43,13 +43,17 @@ const Item = styled.div`
     cursor: pointer;
     align-items: center;
     gap: 20px;
-    padding: 7.5px 0px;
+    padding: 7.5px 15px;
+    &:hover {
+        background-color: ${({theme})=>theme.soft};
+        border-radius: 3px;
+    }
 `
 const Hr = styled.hr`
     margin: 15px 0px;
     border: 0.5px solid ${({theme}) => theme.soft};
 `
-const Login = styled.div``
+const LoginContainer = styled.div``
 
 const Button = styled.button`
 background-color: transparent;
@@ -81,11 +85,13 @@ const Menu = (props) => {
             <Item><VideoLibraryOutlinedIcon/>Library</Item>
             <Item><HistoryOutlinedIcon/>History</Item>
             <Hr/>
-            <Login> Sign in to like videos, comment & subscribe!
+            <LoginContainer> Sign in to like videos, comment & subscribe!
+                <Link to={'signin'} style={{textDecoration:'none'}}>
                 <Button><AccountCircleOutlinedIcon/>
                     SIGN IN
                 </Button>
-            </Login>
+                </Link>
+            </LoginContainer>
             <Hr/>
             <Item><SettingsOutlinedIcon/>Settings</Item>
             <Item><FlagOutlinedIcon/>Report</Item>

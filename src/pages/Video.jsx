@@ -51,7 +51,7 @@ const Hr = styled.div`
   border: 0.5px solid ${({theme})=>theme.soft};
 `
 const Recommendations = styled.div`
-  
+  margin-left: 20px;
 `
 
 const ChannelContainer = styled.div`
@@ -141,8 +141,18 @@ const Video = () => {
         <Comments/>
       </Content>
       <Recommendations>
-       <Card/>
-       <Card/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
+       <Card type='sm'/>
       </Recommendations>
     </Container>
   )
