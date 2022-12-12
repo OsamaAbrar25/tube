@@ -44,6 +44,8 @@ const VideoButton = styled.div`
 display: flex;
 align-items: center;
 gap: 5px;
+font-size: 14px;
+font-weight: 500;
 cursor: pointer;
 `
 const Hr = styled.div`
@@ -103,7 +105,7 @@ const Video = () => {
       <Content>
         <VideoContainer>
           <iframe width='100%'
-          height='592'
+          height='420'
           src='https://www.youtube.com/embed/_fqpk3cXG-U'
           title='YouTube Video Player'
           frameBorder='0'
@@ -116,10 +118,10 @@ const Video = () => {
         <Details>
           <Info>5646164 views - 2 days ago</Info>
           <VideoButtonsContainer>
-            <VideoButton><ThumbUpAltOutlinedIcon/>Like</VideoButton>
-            <VideoButton><ThumbDownAltOutlinedIcon/>Dislike</VideoButton>
-            <VideoButton><ShareOutlinedIcon/>Share</VideoButton>
-            <VideoButton><VolunteerActivismOutlinedIcon/>Donate</VideoButton>
+            <VideoButton><ThumbUpAltOutlinedIcon fontSize='small'/>Like</VideoButton>
+            <VideoButton><ThumbDownAltOutlinedIcon fontSize='small'/>Dislike</VideoButton>
+            <VideoButton><ShareOutlinedIcon fontSize='small'/>Share</VideoButton>
+            <VideoButton><VolunteerActivismOutlinedIcon fontSize='small'/>Donate</VideoButton>
           </VideoButtonsContainer>
         </Details>
         <Hr/>
