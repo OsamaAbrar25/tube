@@ -72,7 +72,7 @@ gap: 20px;
   
 `
 const Subscribe = styled.button`
-  background-color: #cc1a00;
+  background-color: #03989E;
   border: none;
   color: white;
   font-weight: 500;
